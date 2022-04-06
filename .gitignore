@@ -1,0 +1,13 @@
+# python
+init_script.py
+__pycache__
+**.out
+# for ignoring rust output files
+debug/
+target/
+Cargo.lock
+**/*.rs.bk
+# other
+*.pdb
+push.sh
+/.ccls-cache/*
