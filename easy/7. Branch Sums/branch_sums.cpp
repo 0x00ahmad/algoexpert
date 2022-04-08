@@ -1,4 +1,5 @@
-using namespace std;
+#include <iostream>
+#include <vector>
 
 // This is the class of the input root. Do not edit it.
 class BinaryTree {
@@ -14,8 +15,28 @@ public:
   }
 };
 
-vector<int> branchSums(BinaryTree *root) {
-  // Write your code here.
-  return {};
+// don't forget to pass sums by reference :^]
+void recurse(BinaryTree *node, int runningSum, std::vector<int> &sums) {
+  if (node == nullptr) {
+    return;
+  }
+
+  runningSum += node->value;
+
+  if (node->left == nullptr && node->right == nullptr) {
+    sums.push_back(runningSum);
+    return;
+  }
+
+  recurse(node->left, runningSum, sums);
+  recurse(node->right, runningSum, sums);
 }
 
+std::vector<int> branchSums(BinaryTree *root) {
+  std::vector<int> result = {};
+  if (root == nullptr) {
+    return result;
+  }
+  recurse(root, 0, result);
+  return result;
+}
