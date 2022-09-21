@@ -9,5 +9,6 @@ Cargo.lock
 **/*.rs.bk
 # other
 *.pdb
+**.bkp.go
 push.sh
 /.ccls-cache/*
