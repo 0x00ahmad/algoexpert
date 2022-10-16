@@ -14,3 +14,4 @@ push.sh
 /.ccls-cache/*
 
 # incomplete ones
+38*
