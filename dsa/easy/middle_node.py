@@ -5,7 +5,7 @@ class LinkedList:
         self.next = None
 
 
-def middleNode(linkedList: LinkedList):
+def middleNode(linkedList):
     if linkedList is None:
         return None
     count = 0
